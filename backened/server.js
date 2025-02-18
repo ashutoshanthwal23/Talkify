@@ -16,7 +16,7 @@ const server = require('http').createServer(app);
 // Socket.IO setup
 const io = require('socket.io')(server, {
   cors: {
-    origin: 'https://talkify-frontend-5ji6.onrender.com',  
+    origin: process.env.CLIENT_URL,  
     methods: ['GET', 'POST'],
     credentials: true,  
   }
@@ -26,27 +26,8 @@ app.use(cookieParser());
 app.use(express.json({ limit: '8mb' }));
 
 
-const allowedOrigins = [
-  'https://talkify-frontend-5ji6.onrender.com',
-  'http://localhost:5173'
-];
+app.use(cors({ credentials: true, origin: process.env.CLIENT_URL}));
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('CORS not allowed'), false);
-    }
-  },
-
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-  allowedHeaders: ['Content-Type', 'Authorization'], 
-  credentials: true, 
-};
-
-
-app.use(cors(corsOptions));
 
 // Database connection
  DBConnect();
