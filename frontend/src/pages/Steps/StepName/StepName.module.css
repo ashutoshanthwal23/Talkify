@@ -1,0 +1,13 @@
+.paragraph {
+  width: 70%;
+  text-align: center;
+  margin: 20px auto;
+}
+.actionButtonWrap {}
+
+@media (max-width: 568px){
+  .paragraph{
+    font-size: 1rem;
+    width: 100%;
+  }
+}

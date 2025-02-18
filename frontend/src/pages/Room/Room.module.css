@@ -1,0 +1,169 @@
+.userHead {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  border-radius: 50%;
+  position: relative;
+  border: 3px solid #5453e0;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.goBack {
+  display: flex;
+  align-items: center;
+  background: none;
+  outline: none;
+  margin-top: 2rem;
+  border: none;
+
+}
+
+.goBack span {
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 1rem;
+  color: white;
+  position: relative;
+  padding-bottom: 10px;
+}
+.goBack span::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 5px;
+  background-color: #0077FF;
+  left: 0;
+  bottom: 0
+}
+
+.clientWrap {
+  background-color: #1d1d1d;
+  margin-top: 4rem;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 2rem;
+  min-height: calc(100vh - 205px);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.actionBtn {
+  background-color: #262626;
+  outline: none;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.actionBtn:hover {
+  background-color: #333333;
+}
+.actionBtn:nth-child(n + 2) span {
+  margin-left: 10px;
+  font-weight: bold
+}
+.topic{
+  font-weight: bold;
+  font-size: 18px;
+}
+.client {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+.client h4 {
+  font-weight: bold;
+}
+.micWrapper{
+  width: 30px;
+  height: 30px;
+  background-color: #212121;
+  border-radius: 30px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: content-box;
+  
+}
+
+.clientsList {
+  display: flex;
+  margin-top: 2rem;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 568px){
+  .userHead{
+    width: 110px;
+    height: 110px;
+  }
+  .clientWrap {
+    margin-top: 0;
+  }
+  .micWrapper{
+    width: 30px;
+    height: 30px;
+  }
+  .micWrapper img {
+    width: 25px;
+  }
+  .header{
+    flex-direction: column;
+    gap: 3rem
+  }
+  .topic {
+    order: 2;
+    font-size: 1rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .actions > * {
+    margin-right: 0;
+    margin-left: auto;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  .actions img {
+    width: 20px;
+  }
+  .goBack span {
+    font-size: 1rem;
+  }
+  .client h4 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+  }
+  .actionBtn > img {
+    width: 15px;
+  }
+  .actionBtn span {
+    font-size: .8rem;
+  }
+  .client .clientName {
+    font-size: 1rem;
+  }
+}

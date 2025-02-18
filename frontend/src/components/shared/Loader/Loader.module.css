@@ -1,0 +1,23 @@
+.spinner {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 4px solid rgb(66, 66, 233);
+  border-top-color: #C4C5C5;
+  margin-bottom: 20px;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0)
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.cardWrapper{
+  composes: cardWrapper from "../../../App.module.css"
+}
+.message{
+  font-weight: bold;
+}

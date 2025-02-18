@@ -1,0 +1,164 @@
+.card {
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.speakers{
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+ .names {
+  margin-left: 3.5rem;
+}
+
+.nameWrapper span{
+  margin-right: 10px;
+}
+.avatars {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.avatars img{
+  width: 100%;
+  height: 100%;
+  border: 2px solid blue;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #1d1d1d;
+}
+
+ .avatars img:last-child {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+.singleSpeaker .avatars img {
+  position: initial;
+}
+.singleSpeaker .names{
+  margin-left: 20px;
+}
+.nameWrapper{
+  margin-bottom: 5px;
+}
+.totalPeople{
+  text-align: right;
+}
+.totalPeople span{
+  margin-right: 5px;
+  font-weight: bold;
+
+}
+button{
+  background-color: rgb(9, 9, 177);
+  color: white;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.inviteContainer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.inviteContent {
+  width: 50%;
+  min-height: 30%;
+  background-color: rgb(90, 90, 90);
+  text-align: center;
+  position: relative;
+  padding: 10px;
+}
+.linkBtn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 2rem 0;
+  margin-bottom: 1rem;
+}
+.copyLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.copyLink button {
+  width: fit-content;
+}
+.closeBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.copyTextBtn {
+  background-color: rgb(129, 128, 128);
+}
+.actions{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem
+}
+.deleteBtn {
+  padding: 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.deleteBtn img {
+  width: 20px;
+}
+
+@media (max-width: 568px){
+  .card {
+    width: 100%;
+    font-size: .9rem;
+  }
+  .deleteBtn img {
+    width: 20px;
+  }
+  .actions {
+    margin-top: 5px;
+  }
+  .inviteBtn{
+    font-size: 1rem;
+  }
+  .inviteContent {
+    width: 90%;
+    padding: 2rem
+  }
+  .linkBtn{
+    font-size: 1rem;
+    margin-top: 3rem;
+  }
+  .closeBtn {
+    font-size: 1.6rem;
+  }
+  .inviteSpanContent{
+    font-size: 1rem;
+  }
+  .copyLink {
+    gap: 2rem;
+  }
+  .copyLink button {
+    font-size: 1.1rem;
+    padding: .8rem 1.1rem
+  }
+  .shareLink{
+    font-size: 1.1rem;
+  }
+}

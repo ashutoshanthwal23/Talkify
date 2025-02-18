@@ -1,0 +1,124 @@
+.modalWrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .88);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  background-color: #1d1d1d;
+  width: 400px;
+  border-radius: 10px;
+  padding: 1.3rem 0;
+}
+
+button {
+  cursor: pointer;
+}
+.closeButton{
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  background-color: transparent;
+}
+.roomTypeWrapper {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 0 1.3rem;
+  border-bottom: 3px solid #262626;
+}
+.header {
+  padding: 0 1.3rem;
+}
+.roomType {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+.room {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 25px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.room.active {
+  background-color: #262626;
+}
+
+.topicInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  border: none;
+  color: white;
+  background-color: #262626;
+  outline: none;
+  font-weight: bold;
+}
+.startRoomWrapper {
+  text-align: center;
+}
+.startRoomBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(31, 187, 31);
+  padding: 7px 30px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  transition: all .3s ease-in-out;
+}
+.startRoomBtn:hover {
+  background-color: rgb(8, 163, 8);
+}
+.startRoomBtn span {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+@media (max-width: 568px){
+ 
+  .card{
+    width: 90%;
+    font-size: 1rem;
+  }
+  .header h4 {
+    margin-top: 3rem !important;
+  }
+  .closeButton img {
+    width: 30px;
+  }
+  .topicInput{
+    font-size: 1rem;
+    font-weight: lighter !important;
+    font-family:Verdana, Geneva, Tahoma, sans-serif !important;
+  }
+ 
+  .roomType {
+    flex-direction: column;
+  }
+  .startRoomBtn {
+    padding: 10px 2rem
+  }
+  .startRoomBtn span{
+    font-size: 1rem
+  }
+}

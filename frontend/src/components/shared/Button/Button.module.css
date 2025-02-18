@@ -1,0 +1,28 @@
+.button {
+  background-color: rgb(35, 35, 211);
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.button:hover {
+  background-color: blue;
+}
+.arrow{
+  margin-left: 10px;
+}
+
+@media (max-width: 568px){
+  .button {
+    font-size: 1rem;
+    padding: 1rem 1.6rem
+  }
+}

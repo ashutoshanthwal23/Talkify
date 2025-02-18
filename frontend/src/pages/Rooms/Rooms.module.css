@@ -1,0 +1,107 @@
+.roomsHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.heading{
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+.heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 70%;
+  height: 5px;
+  background-color: #0077ff;
+}
+.searchBox {
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+  background-color: #262626;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+.searchIcon {
+  text-align: center;
+}
+.searchInput {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+}
+.addRoomBtn {
+  padding: 7px 20px;
+  background-color: #0aa717;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  font-weight: bold;
+  transition: all .3s linear;
+}
+.addRoomBtn span {
+  font-size: 16px;
+}
+.addRoomBtn:hover {
+  background-color: rgb(6, 146, 6);
+}
+.roomList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 60px;
+  /* justify-items: center */
+}
+@media (max-width: 568px){
+  .roomList{
+    grid-template-columns: 100%;
+    gap: 2rem;
+  }
+  .roomsHeader{
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 0;
+  }
+  .left {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  .left .heading{
+    font-size: 1rem;
+  }
+  .searchBox{
+    width: 100%;
+  }
+  .searchInput{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 1rem
+  }
+  .addRoomBtn span {
+    font-size: 1rem;
+    padding: .5rem;
+    font-weight: lighter;
+  }
+ 
+
+}

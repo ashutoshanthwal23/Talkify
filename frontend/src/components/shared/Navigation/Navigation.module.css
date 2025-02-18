@@ -1,0 +1,83 @@
+.navbar{
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 10px;
+  margin-right: 5px;
+  border: 3px solid blue;
+}
+
+.sliderMenu {
+  width: 90%;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 90000;
+  transition: transform .5s ease-in-out;
+}
+.sliderMenu.open {
+  transform: translateX(0);
+}
+.sliderMenu.close {
+  transform: translateX(100%);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.userInfo .logoutBtn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+.humburgerBtn {
+  font-size: 1rem;
+}
+
+@media (max-width: 568px){
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+  .logoutBtn img {
+    width: 50px;
+  }
+  .userInfo .logoutBtn{
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .sliderMenu button{
+    font-size: 1rem;
+  }
+  
+  .navbar .logoText {
+    font-size: 1.2rem;
+  }
+  .logoImg {
+    width: 25px;
+  }
+  .userName {
+    font-size: 1.2rem;
+  }
+}
