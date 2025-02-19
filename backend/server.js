@@ -46,8 +46,6 @@ app.get("/", (req, res) => {
 // Static file serving for storage
 app.use("/storage", express.static("storage"));
 
-// Handle OPTIONS requests for preflight
-app.options('*', cors(corsOptions));
 
 // Socket.IO handling
 const socketUserMapping = {};
